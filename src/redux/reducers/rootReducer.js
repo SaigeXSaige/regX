@@ -6,14 +6,14 @@ export const initialState = {
     input: "" // "/[ -~]/g"
 }
 
-function inputChange(state = initialState.input, action) {
+export function inputChange(state = initialState, action) {
     switch (action.type) {
         case NEW_INPUT:
-            return action.input;
+            return { ...state, input: action.input};
         default:
-            return state;
+            return {...state};
     }
 }
 
-export const rootReducer = () => combineReducers({inputChange});
+
 
