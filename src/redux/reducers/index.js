@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
+import { NEW_INPUT } from "../actions/input";
 
 const initialState = {
     textarea: "abcdefghifklmnopqrstuvwxyz1234567890!@#$%^&*()_+-=[]\\{}|;':\",./<>?`~",
@@ -7,7 +8,7 @@ const initialState = {
 
 function inputChange(state = initialState.input, action) {
     switch (action.type) {
-        case 'NEW_INPUT':
+        case NEW_INPUT:
             return action.input;
         default:
             return state;
