@@ -1,0 +1,18 @@
+<svg 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="1.1"
+    x="0px"
+    y="0px"
+    viewBox="0 0 100 125" 
+    enable-background="new 0 0 100 100" 
+    xml:space="preserve">
+    <path 
+        d="M17.938,82.813c-0.357,0-0.717-0.076-1.053-0.232c-0.883-0.41-1.447-1.295-1.447-2.268V29.688c0-6.893,5.607-12.5,12.5-12.5  h44.125c6.893,0,12.5,5.607,12.5,12.5v29.5c0,6.893-5.607,12.5-12.5,12.5c-1.381,0-2.5-1.119-2.5-2.5s1.119-2.5,2.5-2.5  c4.136,0,7.5-3.364,7.5-7.5v-29.5c0-4.136-3.364-7.5-7.5-7.5H27.938c-4.136,0-7.5,3.364-7.5,7.5V74.93l9.062-7.652  c0.451-0.381,1.022-0.59,1.613-0.59h31.722c1.381,0,2.5,1.119,2.5,2.5s-1.119,2.5-2.5,2.5H32.026L19.551,82.223  C19.091,82.611,18.517,82.813,17.938,82.813z"/>
+    <!-- <text 
+        x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by myladkings
+    </text>
+    <text 
+        x="0" y="120" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project
+    </text> -->
+</svg>
