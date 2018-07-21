@@ -3,7 +3,7 @@ import { NEW_INPUT } from "../actions/input";
 
 export const initialState = {
     textarea: "abcdefghifklmnopqrstuvwxyz1234567890!@#$%^&*()_+-=[]\\{}|;':\",./<>?`~",
-    input: "" // "/[ -~]/g"
+    input: "/[ -~]/g"
 }
 
 export function inputChange(state = initialState, action) {
