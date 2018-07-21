@@ -8,6 +8,7 @@ import book from "./icons/book.svg";
 import feedback from "./icons/feedback.svg";
 
 import WordBank from './components/WordBank';
+import Form from './components/Form';
 
 class App extends Component {
 
@@ -23,9 +24,10 @@ class App extends Component {
         </div>
         <h2>Welcome to RegX</h2>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Try typing a regular expression in the input form below!
         </p>
         < WordBank textArea={this.props.textarea} />
+        < Form input={this.props.input} />
       </div>
     );
   }
