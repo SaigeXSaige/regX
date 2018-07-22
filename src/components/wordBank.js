@@ -1,7 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const WordBank = ({textArea}) => {
-    return <textarea className="input" id="word-bank" cols="30" rows="10" value={textArea}/>;
+import { changeWordBank } from "../redux/actions/input";
+
+const WordBank = ({textArea, handleWordBankChange}) => {
+    return <textarea className="input" id="word-bank" cols="30" rows="10" value={textArea} onChange={handleWordBankChange}/>;
 }
 
-export default WordBank;
+const mapDispatchToState = dispatch => {
+    return {
+      handleWordBankChange: (e) => dispatch(changeWordBank(e.target.value))
+    }
+}
+
+export default connect(null, mapDispatchToState)(WordBank);

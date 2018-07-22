@@ -34,11 +34,5 @@ const mapStateToProps = state => ({
     ...state,
     textarea: state.textarea
 })
-  
-const mapDispatchToState = dispatch => {
-    return {
-      handleWordBankChange: () => dispatch()
-    }
-}
 
-export default connect(mapStateToProps, mapDispatchToState)(WordBankContainer);
+export default connect(mapStateToProps)(WordBankContainer);
