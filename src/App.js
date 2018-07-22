@@ -34,10 +34,14 @@ class App extends Component {
   }
 }
 
+const mapPropsToState = state => ({
+  input: state.input
+})
+
 const mapDispatchToState = dispatch => ({
   handleInputChange(value) {
     dispatch(changeInput(value))
   }
 })
 
-export default connect( state => ({input: state.input}), mapDispatchToState)(App);
+export default connect( mapPropsToState , mapDispatchToState)(App);
