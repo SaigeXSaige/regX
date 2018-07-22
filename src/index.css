@@ -7,15 +7,24 @@ body {
 #word-bank {
   margin: 0;
   border-radius: 0;
+  color: black;
+  background-color: transparent;
 }
 
 /* imitates scroll of word-bank text area */
 .backdrop {
   overflow: auto;
+  background-color: white;
 }
 
 /* imitates text wrapping of word-bank text area */
 .highlights {
   white-space: pre-wrap;
   word-wrap: break-word;
+  color: transparent;
+}
+
+mark {
+  color: transparent;
+  background-color: lawngreen; 
 }
