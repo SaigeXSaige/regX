@@ -31,8 +31,10 @@ body {
 }
 
 #word-bank {
-  display: inline;
   z-index: 2;
+  width: 245px;
+  height: 145px;
+  resize: none;
   margin: 0;
   border-radius: 0;
   color: black;
