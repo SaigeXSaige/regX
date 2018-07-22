@@ -8,3 +8,14 @@ body {
   margin: 0;
   border-radius: 0;
 }
+
+/* imitates scroll of word-bank text area */
+.backdrop {
+  overflow: auto;
+}
+
+/* imitates text wrapping of word-bank text area */
+.highlights {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
