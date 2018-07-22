@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import './App.css';
 
 import basicHome from "./icons/basicHome.svg";
@@ -9,7 +8,6 @@ import feedback from "./icons/feedback.svg";
 
 import WordBankContainer from './components/WordBankContainer';
 import Form from './components/Form';
-import { changeInput } from "./redux/actions/input";
 
 const App = () => {
 
