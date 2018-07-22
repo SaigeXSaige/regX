@@ -36,10 +36,10 @@ const mapPropsToState = state => ({
   input: state.input
 })
 
-const mapDispatchToState = dispatch => ({
-  handleInputChange(value) {
-    dispatch(changeInput(value))
+const mapDispatchToState = dispatch => {
+  return {
+    handleInputChange: (e) => dispatch(changeInput(e.target.value))
   }
-})
+}
 
 export default connect( mapPropsToState , mapDispatchToState)(App);
