@@ -11,10 +11,8 @@ import WordBankContainer from './components/WordBankContainer';
 import Form from './components/Form';
 import { changeInput } from "./redux/actions/input";
 
-class App extends Component {
+const App = () => {
 
-  
-  render() {
     return (
       <div className="App">
         <div className="App-header">
@@ -31,7 +29,6 @@ class App extends Component {
         < Form input={this.props.input} handleInputChange={this.props.handleInputChange} />
       </div>
     );
-  }
 }
 
 const mapPropsToState = state => ({
