@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { changeWordBank } from "../redux/actions/input";
 
 const WordBank = ({textArea, handleWordBankChange}) => {
-    return <textarea className="input" id="word-bank" cols="30" rows="10" value={textArea} onChange={handleWordBankChange}/>;
+    return <textarea className="input" id="word-bank" cols="30" rows="10" maxLength="110" value={textArea} onChange={handleWordBankChange}/>;
 }
 
 const mapDispatchToState = dispatch => {
