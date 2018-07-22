@@ -32,6 +32,7 @@ const App = (props) => {
 }
 
 const mapPropsToState = state => ({
+  ...state,
   input: state.input
 })
 
