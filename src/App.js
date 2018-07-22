@@ -7,7 +7,7 @@ import lightning from "./icons/lightning.svg";
 import book from "./icons/book.svg";
 import feedback from "./icons/feedback.svg";
 
-import WordBank from './components/WordBank';
+import WordBankContainer from './components/WordBankContainer';
 import Form from './components/Form';
 
 class App extends Component {
@@ -26,11 +26,11 @@ class App extends Component {
         <p className="App-intro">
           Try typing a regular expression in the input form below!
         </p>
-        < WordBank textArea={this.props.textarea} />
+        < WordBankContainer />
         < Form input={this.props.input} />
       </div>
     );
   }
 }
 
-export default connect((state)=> ({textarea: state.textarea, input: state.input}))(App);
+export default connect((state)=> ({input: state.input}))(App);
