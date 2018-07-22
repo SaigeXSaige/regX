@@ -6,9 +6,9 @@ import WordBank from "./WordBank";
 class WordBankContainer extends Component {
     render() {
         return (
-            <div class="container">
-                <div class="backdrop">
-                    <div class="highlights">
+            <div className="container">
+                <div className="backdrop">
+                    <div className="highlights">
                         {/* cloned text with <mark> tags here */}
                     </div>
                 </div>
