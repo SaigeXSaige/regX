@@ -1,10 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
 body {
+
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
 
+.container, .backdrop, #word-bank {
+  width: 260px;
+  height: 180px;
+}
+
+.backdrop, #word-bank {
+  position: absolute;
+  left: 50px;
+}
+
+.highlights, #word-bank {
+  padding: 0.3em;
+  font: 20px/28px 'Inconsolata', monospace;
+  letter-spacing: 1px;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  margin: 0.5em auto ;
+  -webkit-text-size-adjust: none;
+}
+
 #word-bank {
+  display: inline;
+  z-index: 2;
   margin: 0;
   border-radius: 0;
   color: black;
@@ -13,6 +41,7 @@ body {
 
 /* imitates scroll of word-bank text area */
 .backdrop {
+  z-index: 1;
   overflow: auto;
   background-color: white;
 }
@@ -22,9 +51,12 @@ body {
   white-space: pre-wrap;
   word-wrap: break-word;
   color: transparent;
+  text-align: left;
 }
 
+/* for highlighting text inside the highlights  */
 mark {
   color: transparent;
   background-color: lawngreen; 
 }
+
