@@ -6,7 +6,7 @@ const Form = (props) => {
 
     return (
         <form className="regex-input" onChange={props.handleInputChange} >
-          <input type="text" name="input" id="input" placeholder="Try a RegEx here" value={props.input} />  
+          <input type="text" placeholder="Try a RegEx here" value={props.input} />  
         </form>
     )
 };
