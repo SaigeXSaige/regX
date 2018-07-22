@@ -11,7 +11,7 @@ import WordBankContainer from './components/WordBankContainer';
 import Form from './components/Form';
 import { changeInput } from "./redux/actions/input";
 
-const App = (props) => {
+const App = () => {
 
     return (
       <div className="App">
@@ -26,20 +26,9 @@ const App = (props) => {
           Try typing a regular expression in the input form below!
         </p>
         < WordBankContainer />
-        < Form input={props.input} handleInputChange={props.handleInputChange} />
+        < Form />
       </div>
     );
 }
 
-const mapPropsToState = state => ({
-  ...state,
-  input: state.input
-})
-
-const mapDispatchToState = dispatch => {
-  return {
-    handleInputChange: (e) => dispatch(changeInput(e.target.value))
-  }
-}
-
-export default connect( mapPropsToState , mapDispatchToState)(App);
+export default App;
