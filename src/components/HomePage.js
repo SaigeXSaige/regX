@@ -1,7 +1,7 @@
 import React from 'react';
 
-import WordBankContainer from './components/WordBankContainer';
-import Form from './components/Form';
+import WordBankContainer from './WordBankContainer';
+import Form from './Form';
 
 const HomePage = () => {
     return (
