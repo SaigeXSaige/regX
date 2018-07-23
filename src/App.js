@@ -1,16 +1,18 @@
 import React from 'react';
 import './App.css';
-import { Route } from 'react-router';
+import { Switch, Route } from 'react-router-dom';
 import NavBar from "./components/NavBar";
 import HomePage from './components/HomePage';
 
 const App = () => {
 
-    return (
-      <div>
-        < Route component={NavBar} />
-        < Route component={HomePage} />
-      </div>
+  return (
+    <div>
+      <NavBar />
+      <Switch>
+        < Route exact path="/" component={HomePage} />
+      </Switch>
+    </div>
     );
 }
 
