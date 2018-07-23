@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
+
 import NavBar from "./components/NavBar";
 import HomePage from './components/HomePage';
+import ChallengeContainer from './components/ChallengeContainer';
 
 const App = () => {
 
@@ -11,6 +13,7 @@ const App = () => {
       <NavBar />
       <Switch>
         < Route exact path="/" component={HomePage} />
+        < Route exact path="/challenges" component={ChallengeContainer} />
       </Switch>
     </div>
     );
