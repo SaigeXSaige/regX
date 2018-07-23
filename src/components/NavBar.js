@@ -10,16 +10,16 @@ const NavBar = (props) => {
     return (
         <div className="App-header">
             <NavLink to="/">
-                <img src={basicHome} className="App-logo" alt="logo" />
+                <img src={basicHome} className="App-logo" alt="home" />
             </NavLink>
             <NavLink to="/challenges">
-                <img src={lightning} className="App-logo" alt="logo" />
+                <img src={lightning} className="App-logo" alt="challenges" />
             </NavLink>
             <NavLink to="/reference">
-                <img src={book} className="App-logo" alt="logo" />
+                <img src={book} className="App-logo" alt="reference" />
             </NavLink>
             <NavLink to="/feedback">
-                <img src={feedback} className="App-logo" alt="logo" />
+                <img src={feedback} className="App-logo" alt="feedback" />
             </NavLink>
         </div>
     );
