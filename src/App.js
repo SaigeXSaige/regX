@@ -1,21 +1,15 @@
 import React from 'react';
 import './App.css';
-
+import { Route } from 'react-router';
 import NavBar from "./components/NavBar";
-import WordBankContainer from './components/WordBankContainer';
-import Form from './components/Form';
+import HomePage from './components/HomePage';
 
 const App = () => {
 
     return (
-      <div className="App">
-        < NavBar />
-        <h2>Welcome to RegX</h2>
-        <p className="App-intro">
-          Try typing a regular expression in the input form below!
-        </p>
-        < WordBankContainer />
-        < Form />
+      <div>
+        < Route component={NavBar} />
+        < Route component={HomePage} />
       </div>
     );
 }
