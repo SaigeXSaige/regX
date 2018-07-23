@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Title from './Title';
-import Form from './Form';
+import ChallengeForm from './ChallengeForm';
 import Challenge from './Challenge';
 
 const ChallengePage = ({level}) => {
@@ -9,7 +9,7 @@ const ChallengePage = ({level}) => {
         <div>
             <Title level={level} />
             <Challenge />
-            <Form />
+            <ChallengeForm />
         </div>
     );
 }
