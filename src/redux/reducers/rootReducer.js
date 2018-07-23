@@ -6,7 +6,7 @@ export const initialState = {
     input: "/[ -~]/g"
 }
 
-export function inputChange(state = initialState, action) {
+export function handleInput(state = initialState, action) {
     switch (action.type) {
         case NEW_INPUT:
             return { ...state, input: action.input};
