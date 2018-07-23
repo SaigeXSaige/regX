@@ -1,7 +1,7 @@
 import React from 'react';
 
 import WordBankContainer from './WordBankContainer';
-import Form from './Form';
+import HomeForm from './HomeForm';
 
 const HomePage = () => {
     return (
@@ -11,7 +11,7 @@ const HomePage = () => {
             Try typing a regular expression in the input form below!
             </p>
             < WordBankContainer />
-            < Form />
+            < HomeForm />
       </div>
     );
 }
