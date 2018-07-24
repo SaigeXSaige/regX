@@ -20,7 +20,7 @@ const mapDispatchToProps = (dispatch) => ({
             const expression = userInput.split("/")
             const regex = new RegExp(expression[1],expression[2])
             const result = challenge.match(regex)
-            const bool = result.join() === answer.join()
+            const bool = result ? result.join() === answer.join() : false
             
             if (bool) {
                 answer.forEach( 
