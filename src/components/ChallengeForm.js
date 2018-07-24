@@ -20,9 +20,18 @@ const mapDispatchToProps = (dispatch) => ({
             const expression = userInput.split("/")
             const regex = new RegExp(expression[1],expression[2])
             const result = challenge.match(regex)
-            dispatch(submitInput(result.join() === answer))
-        }
-     
+            const bool = result.join() === answer.join()
+            
+            if (bool) {
+                answer.forEach( 
+                    i => {
+                        document.querySelector(`.char-${i}`).className = "challenge-icon animated flipOutX"
+                    }
+                )
+                
+                setTimeout(() => dispatch(submitInput(bool)), 700);
+            } 
+        } 
     }
 })
 
