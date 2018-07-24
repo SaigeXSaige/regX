@@ -16,20 +16,20 @@ import e from '../icons/lowercase/e.svg';
 import r from '../icons/lowercase/r.svg';
 import s from '../icons/lowercase/s.svg';
 
-const Challenge = ({answer}) => {
+const Challenge = ({correctInput}) => {
     return (
         <div className="challenge">
             <Icon src={T} alt="T"/>
             <Icon src={a} alt="a"/>
             <Icon src={k} alt="k"/>
-            {answer ? <Icon src={e} alt="e"/> : <Icon src={Three} alt="3"/>}
+            {correctInput ? <Icon src={e} alt="e"/> : <Icon src={Three} alt="3"/>}
             <Icon src={O} alt="O"/>
             <Icon src={u} alt="u"/>
             <Icon src={t} alt="t"/>
             <Icon src={N} alt="N"/>
             <Icon src={u} alt="u"/>
             <Icon src={m} alt="m"/>
-            {answer ? <Icon src={b} alt="b"/> : <Icon src={Six} alt="6"/>}
+            {correctInput ? <Icon src={b} alt="b"/> : <Icon src={Six} alt="6"/>}
             <Icon src={e} alt="e"/>
             <Icon src={r} alt="r"/>
             <Icon src={s} alt="s"/>

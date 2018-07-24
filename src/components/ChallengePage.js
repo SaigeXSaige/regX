@@ -5,18 +5,18 @@ import Title from './Title';
 import ChallengeForm from './ChallengeForm';
 import Challenge from './Challenge';
 
-const ChallengePage = ({level, answer}) => {
+const ChallengePage = ({level, challenge, answer, correctInput}) => {
     return (
         <div>
             <Title level={level} />
-            <Challenge answer={answer} />
-            <ChallengeForm />
+            <Challenge correctInput={correctInput} />
+            <ChallengeForm challenge={challenge} answer={answer} />
         </div>
     );
 }
 
 const mapStateToProps = (state) => ({
-    ...state, answer: state.answer
+    ...state, correctInput: state.correctInput
 })
 
 export default connect(mapStateToProps)(ChallengePage);
