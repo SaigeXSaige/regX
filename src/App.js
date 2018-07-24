@@ -1,6 +1,8 @@
 import React from 'react';
-import './App.css';
 import { Switch, Route } from 'react-router-dom';
+
+import './App.css';
+import '../node_modules/animate.css'
 
 import NavBar from "./components/NavBar";
 import HomePage from './components/HomePage';
