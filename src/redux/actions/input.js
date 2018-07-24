@@ -16,5 +16,5 @@ export const changeWordBank = (input) => ({
 
 export const submitInput = (bool) => ({
     type: SUBMIT_INPUT,
-    answer: bool
+    correctInput: bool
 })

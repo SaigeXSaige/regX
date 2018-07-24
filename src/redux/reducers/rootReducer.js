@@ -4,7 +4,7 @@ import { NEW_INPUT, NEW_WORD_BANK, SUBMIT_INPUT } from "../actions/input";
 export const initialState = {
     textarea: "abcdefghifklmnopqrstuvwxyz1234567890!@#$%^&*()_+-=[]\\{}|;':\",./<>?`~",
     input: "/[ -~]/g",
-    answer: false
+    correctInput: false
 }
 
 export function handleInput(state = initialState, action) {
@@ -14,7 +14,7 @@ export function handleInput(state = initialState, action) {
         case NEW_WORD_BANK: 
             return { ...state, textarea: action.textarea};
         case SUBMIT_INPUT:
-            return {...state, answer: action.answer}
+            return {...state, correctInput: action.correctInput}
         default:
             return {...state};
     }
