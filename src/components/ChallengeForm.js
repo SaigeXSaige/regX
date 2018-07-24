@@ -24,13 +24,26 @@ const mapDispatchToProps = (dispatch) => ({
             
             if (bool) {
                 answer.forEach( 
-                    i => {
-                        document.querySelector(`.char-${i}`).className = "challenge-icon animated flipOutX"
+                    x => {
+                        document.querySelector(`.char-${x}`).className = "challenge-icon animated flipOutX"
                     }
                 )
                 
                 setTimeout(() => dispatch(submitInput(bool)), 700);
-            } 
+            } else {
+                for (var i = 0; i < challenge.length; i++) {
+                    let x = challenge.charAt(i), iconList = document.querySelectorAll(`.char-${x}`)
+                
+                    if (x !== " ") {
+                        iconList.forEach( icon => {
+                            icon.classList.add("shake")
+                            setTimeout(() => {
+                                icon.classList.remove("shake")
+                            }, 500);
+                        })
+                    }
+                }
+            }
         } 
     }
 })
