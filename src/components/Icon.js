@@ -1,21 +1,13 @@
 import React from 'react';
 
-class Icon extends React.Component {
-    constructor(props) {
-        super(props)
-
-    }
-
-    componentWillUnmount() {
-        console.log('unmount')
-    }
-
-    render( ) {
+const Icon = ({src, alt}) => {
         return (
-            <img src={this.props.src} alt={this.props.alt} className={`challenge-icon char-${this.props.alt} animated infinite bounce`} />
+            <img 
+                src={src} 
+                alt={alt} 
+                className={`challenge-icon char-${alt} animated infinite bounce`} 
+            />
         );
-
-    }
 }
 
 export default Icon;
