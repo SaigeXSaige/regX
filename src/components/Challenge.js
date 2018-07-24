@@ -10,25 +10,26 @@ import u from '../icons/lowercase/u.svg';
 import t from '../icons/lowercase/t.svg';
 import N from '../icons/uppercase/N.svg';
 import m from '../icons/lowercase/m.svg';
+import b from '../icons/lowercase/b.svg';
 import Six from '../icons/numbers/6.svg';
 import e from '../icons/lowercase/e.svg';
 import r from '../icons/lowercase/r.svg';
 import s from '../icons/lowercase/s.svg';
 
-const Challenge = (props) => {
+const Challenge = ({answer}) => {
     return (
         <div className="challenge">
             <Icon src={T} alt="T"/>
             <Icon src={a} alt="a"/>
             <Icon src={k} alt="k"/>
-            <Icon src={Three} alt="3"/>
+            {answer ? <Icon src={e} alt="e"/> : <Icon src={Three} alt="3"/>}
             <Icon src={O} alt="O"/>
             <Icon src={u} alt="u"/>
             <Icon src={t} alt="t"/>
             <Icon src={N} alt="N"/>
             <Icon src={u} alt="u"/>
             <Icon src={m} alt="m"/>
-            <Icon src={Six} alt="6"/>
+            {answer ? <Icon src={b} alt="b"/> : <Icon src={Six} alt="6"/>}
             <Icon src={e} alt="e"/>
             <Icon src={r} alt="r"/>
             <Icon src={s} alt="s"/>
