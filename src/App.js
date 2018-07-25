@@ -6,16 +6,16 @@ import '../node_modules/animate.css'
 
 import NavBar from "./components/NavBar";
 import HomePage from './components/HomePage';
-import ChallengeContainer from './components/ChallengeContainer';
+import ChallengePage from './components/ChallengePage';
 
-const App = () => {
+const App = (props) => {
 
   return (
     <div>
       <NavBar />
       <Switch>
         < Route exact path="/" component={HomePage} />
-        < Route exact path="/challenges" component={ChallengeContainer} />
+        < Route exact path="/challenges/:id" render={(props) => < ChallengePage {...props} />} />
       </Switch>
     </div>
     );
