@@ -12,7 +12,7 @@ const NavBar = (props) => {
             <NavLink to="/">
                 <img src={basicHome} className="App-logo" alt="home" />
             </NavLink>
-            <NavLink to="/challenges">
+            <NavLink to="/challenges/1">
                 <img src={lightning} className="App-logo" alt="challenges" />
             </NavLink>
             <NavLink to="/reference">
