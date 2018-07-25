@@ -23,11 +23,19 @@ const mapDispatchToProps = (dispatch) => ({
             const bool = result ? result.join() === answer.join() : false
             
             if (bool) {
-                answer.forEach( 
-                    x => {
+                if (answer.length === 1) {
+                    const str = answer.join()
+                    for (let i = 0; i < str.length; i++) {
+                        let x = str.charAt(i) === "!" ? "e" : str.charAt(i)
                         document.querySelector(`.char-${x}`).className = "challenge-icon animated flipOutX"
                     }
-                )
+                } else {
+                    answer.forEach( 
+                        x => {
+                            document.querySelector(`.char-${x}`).className = "challenge-icon animated flipOutX"
+                        }
+                    )
+                }
                 
                 setTimeout(() => dispatch(submitInput(bool)), 700);
             } else {
