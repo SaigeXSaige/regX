@@ -34,9 +34,9 @@ class ChallengeContainer extends Component {
                 /> */}
                 < ChallengePage 
                     level={2} 
-                    challenge="Grab Me!"
-                    answer={["M","e"]}
-                    icons={[G,r,a,b,[M,b],[e,e],[exclamation,d]]}
+                    challenge="Grab M3!"
+                    answer={["M3!"]}
+                    icons={[G,r,a,b,[M,b],[Three,e],[exclamation,d]]}
                 />
                 {/* < ChallengePage level={3}/>
                 < ChallengePage level={4}/>
