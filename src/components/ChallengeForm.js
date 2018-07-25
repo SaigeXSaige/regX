@@ -21,18 +21,25 @@ const mapDispatchToProps = (dispatch) => ({
             const regex = new RegExp(expression[1],expression[2])
             const result = challenge.match(regex)
             const bool = result ? result.join() === answer.join() : false
+            console.log('result:', result.join(), 'answer:', answer.join())
             
             if (bool) {
                 if (answer.length === 1) {
                     const str = answer.join()
                     for (let i = 0; i < str.length; i++) {
-                        let x = str.charAt(i) === specialChar[0] ? specialChar[1] : str.charAt(i)
-                        document.querySelector(`.char-${x}`).className = "challenge-icon animated flipOutX"
-                    }
+                        let y = str.charAt(i) === specialChar[0] ? specialChar[1] : str.charAt(i)
+                        document.querySelector(`.char-${y}`).className = "challenge-icon animated flipOutX"
+                    } 
                 } else {
                     answer.forEach( 
                         x => {
-                            document.querySelector(`.char-${x}`).className = "challenge-icon animated flipOutX"
+                            if (x.length > 1) {
+                                for (let i = 0; i < x.length; i++) {
+                                    document.querySelector(`.char-${x.charAt(i)}`).className = "challenge-icon animated flipOutX"
+                                } 
+                            } else {
+                                document.querySelector(`.char-${x}`).className = "challenge-icon animated flipOutX"
+                            }
                         }
                     )
                 }
