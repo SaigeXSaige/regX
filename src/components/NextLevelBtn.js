@@ -7,7 +7,7 @@ const NextLevelBtn = ({level, handleClick}) => {
     return (
         <div>
             {
-                level === 2 ? 
+                level === 3 ? 
                 <button disabled="disabled">Congratulations!</button> : 
                 <Link to={`/challenges/${++level}`}>
                     <button onClick={handleClick}>Next Level</button>
