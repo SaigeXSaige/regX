@@ -37,9 +37,7 @@ const mapDispatchToProps = (dispatch) => ({
                     if (x !== " ") {
                         iconList.forEach( icon => {
                             icon.classList.add("shake")
-                            setTimeout(() => {
-                                icon.classList.remove("shake")
-                            }, 500);
+                            setTimeout(() => icon.classList.remove("shake"), 500);
                         })
                     }
                 }
