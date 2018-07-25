@@ -19,7 +19,7 @@ import T from '../icons/uppercase/T.svg';
 import u from '../icons/lowercase/u.svg';
 import Three from '../icons/numbers/3.svg';
 import Six from '../icons/numbers/6.svg';
-import exclamation from '../icons/special_chars/exc.svg'
+import exclamation from '../icons/special_chars/xclamation.svg'
 
 class ChallengeContainer extends Component {
 
@@ -34,9 +34,10 @@ class ChallengeContainer extends Component {
                 /> */}
                 < ChallengePage 
                     level={2} 
-                    challenge="Grab M3!"
-                    answer={["M3!"]}
-                    icons={[G,r,a,b,[M,b],[Three,e],[exclamation,d]]}
+                    challenge="Grab Me!"
+                    answer={["Me!"]}
+                    icons={[G,r,a,b,[M,b],[e,e],[exclamation,d]]}
+                    specialChar={["!", "x"]}
                 />
                 {/* < ChallengePage level={3}/>
                 < ChallengePage level={4}/>
