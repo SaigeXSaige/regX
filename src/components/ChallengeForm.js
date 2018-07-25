@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { submitInput } from '../redux/actions/input';
 
-const ChallengeForm = ({challenge, answer, handleSubmit}) => {
+const ChallengeForm = ({challenge, answer, specialChar, handleSubmit}) => {
     return (
-        <form className="regex-input" onSubmit={(e) => handleSubmit(e, challenge, answer)}>
+        <form className="regex-input" onSubmit={(e) => handleSubmit(e, challenge, answer, specialChar)}>
             <input type="text" placeholder="Type expressions here" />
         </form>
     );
@@ -12,7 +12,7 @@ const ChallengeForm = ({challenge, answer, handleSubmit}) => {
 
 
 const mapDispatchToProps = (dispatch) => ({
-    handleSubmit: (e, challenge, answer) => {
+    handleSubmit: (e, challenge, answer, specialChar) => {
         e.preventDefault()
 
         const userInput = e.target.firstChild.value
@@ -26,7 +26,7 @@ const mapDispatchToProps = (dispatch) => ({
                 if (answer.length === 1) {
                     const str = answer.join()
                     for (let i = 0; i < str.length; i++) {
-                        let x = str.charAt(i) === "!" ? "e" : str.charAt(i)
+                        let x = str.charAt(i) === specialChar[0] ? specialChar[1] : str.charAt(i)
                         document.querySelector(`.char-${x}`).className = "challenge-icon animated flipOutX"
                     }
                 } else {

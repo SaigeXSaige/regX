@@ -5,12 +5,12 @@ import Title from './Title';
 import ChallengeForm from './ChallengeForm';
 import Challenge from './Challenge';
 
-const ChallengePage = ({level, challenge, answer, icons, correctInput}) => {
+const ChallengePage = ({level, challenge, answer, icons, specialChar, correctInput}) => {
     return (
         <div>
             <Title level={level} />
             <Challenge icons={icons} correctInput={correctInput} />
-            <ChallengeForm challenge={challenge} answer={answer} />
+            <ChallengeForm challenge={challenge} specialChar={specialChar} answer={answer} />
         </div>
     );
 }
