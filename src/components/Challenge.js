@@ -1,38 +1,17 @@
 import React from 'react';
 
 import Icon from './Icon'
-import T from '../icons/uppercase/T.svg';
-import a from '../icons/lowercase/a.svg';
-import k from '../icons/lowercase/k.svg';
-import Three from '../icons/numbers/3.svg';
-import O from '../icons/uppercase/O.svg';
-import u from '../icons/lowercase/u.svg';
-import t from '../icons/lowercase/t.svg';
-import N from '../icons/uppercase/N.svg';
-import m from '../icons/lowercase/m.svg';
-import b from '../icons/lowercase/b.svg';
-import Six from '../icons/numbers/6.svg';
-import e from '../icons/lowercase/e.svg';
-import r from '../icons/lowercase/r.svg';
-import s from '../icons/lowercase/s.svg';
 
-const Challenge = ({correctInput}) => {
+const Challenge = ({icons, correctInput}) => {
     return (
         <div className="challenge">
-            <Icon src={T} alt="T"/>
-            <Icon src={a} alt="a"/>
-            <Icon src={k} alt="k"/>
-            {correctInput ? <Icon src={e} alt="e"/> : <Icon src={Three} alt="3"/>}
-            <Icon src={O} alt="O"/>
-            <Icon src={u} alt="u"/>
-            <Icon src={t} alt="t"/>
-            <Icon src={N} alt="N"/>
-            <Icon src={u} alt="u"/>
-            <Icon src={m} alt="m"/>
-            {correctInput ? <Icon src={b} alt="b"/> : <Icon src={Six} alt="6"/>}
-            <Icon src={e} alt="e"/>
-            <Icon src={r} alt="r"/>
-            <Icon src={s} alt="s"/>
+            {icons.map(icon => {
+                if (Array.isArray(icon)) {
+                    return correctInput ? <Icon src={icon[1]} alt={icon[1].charAt(14)}/> : <Icon src={icon[0]} alt={icon[0].charAt(14)}/>
+                } else {
+                    return <Icon src={icon} alt={icon.charAt(14)}/>}
+                })
+            }
         </div>    
     );
 }
