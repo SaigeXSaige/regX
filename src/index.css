@@ -11,6 +11,44 @@ h2 {
   margin-bottom: 2em;
 }
 
+button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  position: absolute;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  top: 40%;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+  border-radius: 10px;
+  color: white;
+  text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+  border: 5px solid transparent;
+  border-bottom-color: rgba(0,0,0,0.35);
+  background: lawngreen;
+  cursor: pointer;
+  outline: 0 !important;
+
+  animation: pulse 1s infinite alternate;
+  transition: background 0.4s, border 0.2s, margin 0.2s;
+}
+button:hover {
+  background:green;
+  margin-top: -1px;
+
+  animation: none;
+}
+button:active {
+  border-bottom-width: 0;
+  margin-top: 5px;
+}
+button:disabled {
+  background:green;
+  margin-top: -1px;
+
+  animation: none;
+}
+
 input{
     width: 15em;
     padding: 1em 0;
