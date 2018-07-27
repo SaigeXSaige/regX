@@ -1,4 +1,3 @@
-import { combineReducers } from "redux";
 import { NEW_INPUT, NEW_WORD_BANK, SUBMIT_INPUT } from "../actions/input";
 
 import a from '../../icons/lowercase/a.svg';
