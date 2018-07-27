@@ -8,9 +8,9 @@ import lightning from "../icons/lightning.svg";
 import book from "../icons/book.svg";
 import feedback from "../icons/feedback.svg";
 
-const NavBar = (props) => {
+const NavBar = ({handleClick}) => {
     return (
-        <div className="App-header" onClick={() => props.handleClick()}>
+        <div className="App-header" onClick={handleClick}>
             <NavLink to="/">
                 <img src={basicHome} className="App-logo" alt="home" />
             </NavLink>
@@ -29,7 +29,11 @@ const NavBar = (props) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleClick: () => dispatch(submitInput(false)) //sets correctInput to false 
+        handleClick: (e) => {
+            if (e.target.tagName === 'IMG' && e.target.alt !== "challenges" ) {
+                dispatch(submitInput(false)) //sets correctInput to false on nav icon click
+            }
+        } 
     } 
 };
 
