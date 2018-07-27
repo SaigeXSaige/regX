@@ -10,13 +10,24 @@ const ChallengeForm = ({challenge, answer, specialChar, handleSubmit}) => {
     );
 }
 
+const iconShake = () => {
+    const iconList = document.querySelectorAll(".challenge-icon")
+               
+    iconList.forEach( icon => {
+        icon.classList.add("shake")
+        setTimeout(() => icon.classList.remove("shake"), 500);
+    })     
+}
+
 
 const mapDispatchToProps = (dispatch) => ({
     handleSubmit: (e, challenge, answer, specialChar) => {
         e.preventDefault()
 
         const userInput = e.target.firstChild.value
-        if (userInput.includes("/")) {
+        if (!userInput.includes("/")) {
+            iconShake()
+        } else {
             const expression = userInput.split("/")
             const regex = new RegExp(expression[1],expression[2])
             const result = challenge.match(regex)
@@ -46,12 +57,7 @@ const mapDispatchToProps = (dispatch) => ({
                 
                 setTimeout(() => dispatch(submitInput(bool)), 700);
             } else {
-                const iconList = document.querySelectorAll(".challenge-icon")
-                //shakes on incorrect input
-                iconList.forEach( icon => {
-                    icon.classList.add("shake")
-                    setTimeout(() => icon.classList.remove("shake"), 500);
-                })     
+                iconShake()
             }
         } 
     }
