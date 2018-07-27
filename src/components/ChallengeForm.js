@@ -21,7 +21,7 @@ const mapDispatchToProps = (dispatch) => ({
             const regex = new RegExp(expression[1],expression[2])
             const result = challenge.match(regex)
             const bool = result ? result.join() === answer.join() : false
-            console.log('result:', result.join(), 'answer:', answer.join())
+            // console.log('result:', result.join(), 'answer:', answer.join())
             
             if (bool) {
                 if (answer.length === 1) {
@@ -46,16 +46,12 @@ const mapDispatchToProps = (dispatch) => ({
                 
                 setTimeout(() => dispatch(submitInput(bool)), 700);
             } else {
-                for (var i = 0; i < challenge.length; i++) {
-                    let x = challenge.charAt(i), iconList = document.querySelectorAll(`.char-${x}`)
-                
-                    if (x !== " ") {
-                        iconList.forEach( icon => {
-                            icon.classList.add("shake")
-                            setTimeout(() => icon.classList.remove("shake"), 500);
-                        })
-                    }
-                }
+                const iconList = document.querySelectorAll(".challenge-icon")
+                //shakes on incorrect input
+                iconList.forEach( icon => {
+                    icon.classList.add("shake")
+                    setTimeout(() => icon.classList.remove("shake"), 500);
+                })     
             }
         } 
     }
