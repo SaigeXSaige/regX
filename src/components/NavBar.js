@@ -29,7 +29,7 @@ const NavBar = (props) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleClick: () => dispatch(submitInput(false))
+        handleClick: () => dispatch(submitInput(false)) //sets correctInput to false 
     } 
 };
 
