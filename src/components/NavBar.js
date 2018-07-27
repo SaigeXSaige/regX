@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
+import { connect } from 'react-redux';
+import { submitInput } from '../redux/actions/input';
 
 import basicHome from "../icons/basicHome.svg";
 import lightning from "../icons/lightning.svg";
@@ -8,7 +10,7 @@ import feedback from "../icons/feedback.svg";
 
 const NavBar = (props) => {
     return (
-        <div className="App-header">
+        <div className="App-header" onClick={() => props.handleClick()}>
             <NavLink to="/">
                 <img src={basicHome} className="App-logo" alt="home" />
             </NavLink>
@@ -25,4 +27,10 @@ const NavBar = (props) => {
     );
 }
 
-export default NavBar;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleClick: () => dispatch(submitInput(false))
+    } 
+};
+
+export default connect(null, mapDispatchToProps)(NavBar);
