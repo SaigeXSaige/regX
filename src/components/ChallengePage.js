@@ -5,10 +5,11 @@ import Title from './Title';
 import ChallengeForm from './ChallengeForm';
 import Challenge from './Challenge';
 import NextLevelBtn from "./NextLevelBtn";
+import Description from './Description';
 
 const ChallengePage = ({levels, correctInput, match}) => {
     const id = match.params.id
-    const {level, challenge, answer, icons, specialChar} = levels[id]
+    const {level, challenge, answer, icons, specialChar, description, link} = levels[id]
 
     return (
         <div className="App">
@@ -16,6 +17,7 @@ const ChallengePage = ({levels, correctInput, match}) => {
             <Challenge icons={icons} correctInput={correctInput} />
             {!correctInput ? <ChallengeForm challenge={challenge} specialChar={specialChar} answer={answer} />
                 : < NextLevelBtn level={level} />}
+            {!correctInput ? <Description description={description} link={link}/> : null }
         </div>
     );
 }
