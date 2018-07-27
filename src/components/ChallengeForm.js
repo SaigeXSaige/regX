@@ -28,15 +28,18 @@ const mapDispatchToProps = (dispatch) => ({
         if (!userInput.includes("/")) {
             iconShake()
         } else {
-            const expression = userInput.split("/")
-            const regex = new RegExp(expression[1],expression[2])
-            const result = challenge.match(regex)
-            const bool = result ? result.join() === answer.join() : false
+            //splits user input into expression and flags
+            const expression = userInput.split("/") 
+            const regex = new RegExp(expression[1],expression[2]) 
+            //checks if the regex produced by the userInput would match the correct chars
+            const result = challenge.match(regex) 
+            const bool = result ? result.join() === answer.join() : false 
             // console.log('result:', result.join(), 'answer:', answer.join())
             
             if (bool) {
                 if (answer.length === 1) {
                     const str = answer.join()
+                    //handles special characters that cant be written as a file name like "!"
                     for (let i = 0; i < str.length; i++) {
                         let y = str.charAt(i) === specialChar[0] ? specialChar[1] : str.charAt(i)
                         document.querySelector(`.char-${y}`).className = "challenge-icon animated flipOutX"
