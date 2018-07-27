@@ -16,7 +16,6 @@ button {
   position: absolute;
   font-size: 1.5em;
   text-transform: uppercase;
-  top: 40%;
   left: 50%;
   width: 200px;
   margin-left: -100px;
@@ -52,8 +51,8 @@ button:disabled {
 input{
     width: 15em;
     padding: 1em 0;
-    margin: 1em 0;
-    font-family: 'Inconsolata', monospace;
+    margin: 2em 0;
+    font-family: 16px 'Inconsolata', monospace;
     font-weight: 400;
     color: #377D6A;
     background: white;
@@ -75,7 +74,7 @@ input:focus{
     box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2);
 }
 
-.container, .backdrop, #word-bank {
+.container, .highlights, #word-bank {
   width: 260px;
   height: 160px;
 }
@@ -89,7 +88,6 @@ input:focus{
   padding: 0.3em;
   font: 20px/28px 'Inconsolata', monospace;
   letter-spacing: 1px;
-  
 }
 
 .container {
@@ -102,8 +100,6 @@ input:focus{
 #word-bank {
   z-index: 2;
   border: 0.1em solid black;
-  width: 245px;
-  height: 145px;
   resize: none;
   margin: 0;
   border-radius: 0;
