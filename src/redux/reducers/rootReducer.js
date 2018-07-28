@@ -55,14 +55,14 @@ export const initialState = {
             challenge: "Tak3 Out Num6ers",
             answer: [3,6],
             icons: [T,a,k,[Three,e],O,u,t,N,u,m,[Six,b],e,r,s],
-            description: "To grab numbers, you can use the '/d' character class for digits or wrap a range of characters in '[ ]'. To grab multiple matches, you use the 'g' flag"
+            description: "To grab numbers, you can use the '/d' character class for digits or wrap a range of characters in '[ ]'. To grab multiple matches, you use the 'g' (global) flag"
         },
         "3": {
             level: 3,
             challenge: "On1y Caps And Num",
             answer: ["O",1,"C","A","N"],
             icons: [[O,o],n,[One,l],y,[C,c],a,p,s,[A,a],n,d,[N,n],u,m],
-            description: "Regular expressions by default are case sensitive and reads characters as ",
+            description: "Regular expressions by default are case sensitive and read characters as ",
             link: "Unicode"
 
         },
