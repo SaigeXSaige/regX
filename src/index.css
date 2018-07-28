@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
-body {
-
+body, html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -130,8 +129,34 @@ mark {
   background-color: lawngreen; 
 }
 
+.challenge {
+  margin: 0 1em;
+}
+
 .challenge-icon {
   height: 4em;
   width: 2.5em;
 }
 
+.footer {
+  display: flex;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  bottom: 0;
+  background-color: lawngreen;
+  width: 100%;
+  justify-content: center;
+}
+
+.footer p {
+  padding: 0.5em;
+  margin: 1em 2em 4em;
+  border-radius: 0.5em;
+  text-align: center;
+  font-family: 16px 'Inconsolata', monospace; 
+  opacity: 0.7;
+  background-color: white;
+  color: black;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
