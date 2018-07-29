@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux';
-import { submitInput } from '../redux/actions/input';
+import { submitInput, submitFeedback } from '../redux/actions/input';
 
 import basicHome from "../icons/basicHome.svg";
 import lightning from "../icons/lightning.svg";
@@ -31,7 +31,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         handleClick: (e) => {
             if (e.target.tagName === 'IMG' && e.target.alt !== "challenges" ) {
-                dispatch(submitInput(false)) //sets correctInput to false on nav icon click
+                dispatch(submitInput(false)) //sets correctInput to false on icon click
+                dispatch(submitFeedback(false)) //sets isSubmitted to false on icon click
             }
         } 
     } 
