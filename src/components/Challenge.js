@@ -3,11 +3,6 @@ import React from 'react';
 import Icon from './Icon'
 
 class Challenge extends React.Component {
-    constructor(props) {
-        super(props);
-        
-    }
-    
 
     componentDidMount() {
         this.addBounce()    
