@@ -10,12 +10,14 @@ class Challenge extends React.Component {
     
 
     componentDidMount() {
-        const iconList = document.querySelectorAll(".challenge-icon")
-
-        iconList.forEach( icon =>  icon.className += "animated infinite bounce")     
+        this.addBounce()    
     }
 
     componentDidUpdate() {
+        this.addBounce()
+    }
+
+    addBounce = () => {
         const iconList = document.querySelectorAll(".challenge-icon")
 
         iconList.forEach( icon => icon.className.includes("animated") ? null : icon.className += "animated infinite bounce")
