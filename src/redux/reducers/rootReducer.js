@@ -1,4 +1,4 @@
-import { NEW_INPUT, NEW_WORD_BANK, SUBMIT_INPUT } from "../actions/input";
+import { NEW_INPUT, NEW_WORD_BANK, SUBMIT_INPUT, SUBMIT_FEEDBACK } from "../actions/input";
 
 import a from '../../icons/lowercase/a.svg';
 import A from '../../icons/uppercase/A.svg';
@@ -41,6 +41,7 @@ export const initialState = {
     textarea: "abcdefghifklmnopqrstuvwxyz1234567890!@#$%^&*()_+-=[]\\{}|;':\",./<>?`~",
     input: "/[ -~]/g",
     correctInput: false,
+    isSubmitted: false,
     levels: {
         "1": {
             level: 1, 
@@ -83,7 +84,9 @@ export function handleInput(state = initialState, action) {
         case NEW_WORD_BANK: 
             return { ...state, textarea: action.textarea};
         case SUBMIT_INPUT:
-            return {...state, correctInput: action.correctInput}
+            return {...state, correctInput: action.correctInput};
+        case SUBMIT_FEEDBACK:
+            return {...state, isSubmitted: action.isSubmitted}
         default:
             return {...state};
     }
