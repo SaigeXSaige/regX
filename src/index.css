@@ -140,7 +140,6 @@ mark {
 
 .footer {
   display: flex;
-  position: fixed;
   padding: 0;
   margin: 0;
   bottom: 0;
