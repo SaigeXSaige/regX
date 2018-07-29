@@ -5,7 +5,7 @@ const Icon = ({src, alt}) => {
             <img 
                 src={src} 
                 alt={alt} 
-                className={`challenge-icon char-${alt} animated infinite bounce`} 
+                className={`challenge-icon char-${alt} `} 
             />
         );
 }
