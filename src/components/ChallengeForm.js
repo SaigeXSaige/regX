@@ -10,7 +10,7 @@ const ChallengeForm = ({challenge, answer, specialChar, handleSubmit}) => {
     );
 }
 
-const iconShake = () => {
+const shakeIcons = () => {
     const iconList = document.querySelectorAll(".challenge-icon")
                
     iconList.forEach( icon => {
@@ -26,7 +26,7 @@ const mapDispatchToProps = (dispatch) => ({
 
         const userInput = e.target.firstChild.value
         if (!userInput.includes("/")) {
-            iconShake()
+            shakeIcons()
         } else {
             //splits user input into expression and flags
             const expression = userInput.split("/") 
@@ -60,7 +60,7 @@ const mapDispatchToProps = (dispatch) => ({
                 
                 setTimeout(() => dispatch(submitInput(bool)), 700);
             } else {
-                iconShake()
+                shakeIcons()
             }
         } 
     }
