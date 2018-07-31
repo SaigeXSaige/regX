@@ -12,7 +12,7 @@ const ChallengeForm = ({challenge, answer, specialChar, handleSubmit}) => {
 
 const shakeIcons = () => {
     const iconList = document.querySelectorAll(".challenge-icon")
-               
+    window.navigator.vibrate(200);         
     iconList.forEach( icon => {
         icon.classList.add("shake")
         setTimeout(() => icon.classList.remove("shake"), 500);

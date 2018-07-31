@@ -145,6 +145,7 @@ mark {
   margin: 0;
   bottom: 0;
   background-color: lawngreen;
+  min-height: 150px;
   width: 100%;
   height: 100%;
   justify-content: center;
