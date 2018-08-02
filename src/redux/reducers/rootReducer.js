@@ -46,22 +46,22 @@ export const initialState = {
         "1": {
             level: 1, 
             challenge: "Grab Me!",
-            answer: ["Me!"],
+            matches: ["Me!"],
             icons: [G,r,a,b,[M,b],[e,e],[exclamation,d]],
             specialChar: ["!", "x"],
-            description: "By default, regular expressions grab the first match and store it. You can match an entire word by just wrapping it inside the opening and closing '/'s"
+            description: "By default, regular expressions grab the first match and store it. You can match an entire word by just wrapping it inside an opening '/' and closing '/'."
         },
         "2": {
             level: 2,
             challenge: "Tak3 Out Num6ers",
-            answer: [3,6],
+            matches: [3,6],
             icons: [T,a,k,[Three,e],O,u,t,N,u,m,[Six,b],e,r,s],
             description: "To grab numbers, you can use the '/d' character class for digits or wrap a range of characters in '[ ]'. To grab multiple matches, you use the 'g' (global) flag"
         },
         "3": {
             level: 3,
             challenge: "On1y Caps And Num",
-            answer: ["O",1,"C","A","N"],
+            matches: ["O",1,"C","A","N"],
             icons: [[O,o],n,[One,l],y,[C,c],a,p,s,[A,a],n,d,[N,n],u,m],
             description: "Regular expressions by default are case sensitive and read characters as ",
             link: "Unicode"
@@ -70,7 +70,7 @@ export const initialState = {
         "4": {
             level: 4,
             challenge: "Low3R Cas3 2 CAPS",
-            answer: ["ow3","as3"],
+            matches: ["ow3","as3"],
             icons: [L,[o,O],[w,W],[Three,E],R,C,[a,A],[s,S],[Three,E],Two,C,A,P,S],
             description: "The '+' quantifier will match 1 or more of the preceeding expression tokens"
         }

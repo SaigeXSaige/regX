@@ -1,16 +1,17 @@
 {
     "short_name": "RegX",
-    "name": "RegX: The RegEx Learning Game",
+    "name": "RegX",
+    "description": "The RegEx Learning Game",
     "icons": [
       {
-        "src": "favicon.ico",
+        "src": "logo.png",
         "sizes": "192x192 512x512",
-        "type": "image/x-icon"
+        "type": "image/png"
       }
     ],
     "start_url": "./index.html",
     "display": "standalone",
-    "theme_color": "#7cfc00",
-    "background_color": "#ffffff"
+    "theme_color": "#000000",
+    "background_color": "#7cfc00"
   }
   

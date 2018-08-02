@@ -12,7 +12,7 @@ import FeedbackPage from './components/FeedbackPage';
 const App = (props) => {
 
   return (
-    <div>
+    <div id="wrapper">
       <NavBar />
       <Switch>
         < Route exact path="/" component={HomePage} />
