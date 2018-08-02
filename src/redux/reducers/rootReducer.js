@@ -49,7 +49,7 @@ export const initialState = {
             matches: ["Me!"],
             icons: [G,r,a,b,[M,b],[e,e],[exclamation,d]],
             specialChar: ["!", "x"],
-            description: "By default, regular expressions grab the first match and store it. You can match an entire word by just wrapping it inside the opening and closing '/'s"
+            description: "By default, regular expressions grab the first match and store it. You can match an entire word by just wrapping it inside an opening '/' and closing '/'."
         },
         "2": {
             level: 2,
